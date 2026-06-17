@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EternityPaws | Premium Holographic Pet Memorial Box</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --bg-dark: #09090b; 
+            --card-bg: #18181b; 
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fafafa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent; 
+        }
+
+        /* Subtle glowing dots background */
+        .bg-subtle-pattern {
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+
+        /* Hide scrollbars for slick mobile card swiping */
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scroll-snap-x {
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Responsive reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #f3e5ab, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn-glow {
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-glow:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body class="antialiased pb-24 md:pb-0 bg-subtle-pattern">
+
+    <!-- Header Navigation -->
+    <nav class="sticky top-0 w-full z-40 bg-[#09090b]/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-paw text-[#d4af37] text-lg"></i>
+                    <span class="font-bold text-lg tracking-wider text-white">Eternity<span class="text-[#d4af37]">Paws</span></span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#stories" class="hidden sm:inline-block text-xs text-zinc-400 hover:text-[#d4af37] transition-colors">Memorial Stories</a>
+                    <a href="#products" class="hidden sm:inline-block text-xs text-zinc-400 hover:text-[#d4af37] transition-colors">Our Models</a>
+                    <a href="#process" class="hidden sm:inline-block text-xs text-zinc-400 hover:text-[#d4af37] transition-colors">How to Custom</a>
+                    <!-- Fixed: High-compatibility WhatsApp API Link -->
+                    <a href="https://api.whatsapp.com/send?phone=8618365131225" target="_blank" rel="noopener noreferrer" class="bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded-full text-xs font-semibold border border-white/10 flex items-center gap-1.5 transition-all">
+                        <i class="fab fa-whatsapp text-[#25D366]"></i> Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-8 pb-10 overflow-hidden relative">
+        <div class="max-w-4xl mx-auto px-4 text-center reveal active">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+                <span class="w-2 h-2 rounded-full bg-[#d4af37] animate-pulse"></span>
+                <span class="text-[11px] font-medium text-zinc-300 tracking-wider">Freeze Love in Eternal Light</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white">
+                Across Dimensions,<br>
+                Keep Your Pet in <span class="text-gradient-gold">Holographic Light</span>
+            </h1>
+            
+            <p class="max-w-xl text-zinc-400 text-sm sm:text-base font-light leading-relaxed mb-10 mx-auto">
+                Just send us a single photo of your beloved companion. Our 3D artists and algorithm team will reconstruct a lifelike, glassless 3D holographic model, safely preserved in a physical tabletop box.
+                <span class="block mt-2 italic text-[#d4af37]/80">"That familiar sweet companion, always with you in light and shadow."</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 px-4">
+                <!-- Fixed: High-compatibility WhatsApp API Link -->
+                <a href="https://api.whatsapp.com/send?phone=8618365131225" target="_blank" rel="noopener noreferrer" class="btn-glow bg-white text-black px-8 py-3.5 rounded-full font-bold text-base flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg text-[#25D366]"></i> WhatsApp: Evaluate Photo for Free
+                </a>
+                <a href="#stories" class="px-8 py-3.5 rounded-full border border-white/10 bg-white/5 text-zinc-300 font-medium text-sm hover:bg-white/10 transition-all">
+                    See Real Customer Results
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Block: Responsive Horizontal Scrolling Story Line (01-10) -->
+    <section id="stories" class="py-10 bg-zinc-900/20 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="mb-6 flex justify-between items-end px-1">
+                <div>
+                    <h2 class="text-lg font-bold text-white">Echoback of Love</h2>
+                    <p class="text-zinc-500 text-xs">Swipe to read 10 heartwarming stories of reunions</p>
+                </div>
+                <span class="text-xs text-zinc-500 hidden sm:inline-block">Swipe right to read more <i class="fas fa-arrow-right ml-1"></i></span>
+            </div>
+
+            <!-- Horizontal Carousel container (10 Stories) -->
+            <div class="flex overflow-x-auto gap-4 hide-scrollbar scroll-snap-x pb-4">
+
+                <!-- ⭐️ Story 02: Jenny (Top featured with Image/Video Tab Switcher) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <!-- Media switcher -->
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <!-- Photo (default) -->
+                            <img id="img-story-02" src="02.jpg" alt="Jenny Photo" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300">
+                            <!-- Holographic Video -->
+                            <video id="vid-story-02" src="02.mp4" loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"></video>
+                            
+                            <!-- Control Capsule -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex bg-black/75 backdrop-blur-md p-1 rounded-full border border-white/10 text-[9px] z-10">
+                                <button onclick="toggleMedia('story-02', 'photo')" id="btn-photo-story-02" class="px-2.5 py-1 rounded-full text-white bg-white/10 font-medium transition-all">In Life</button>
+                                <button onclick="toggleMedia('story-02', 'video')" id="btn-video-story-02" class="px-2.5 py-1 rounded-full text-zinc-400 font-medium transition-all">Hologram</button>
+                            </div>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "My sweet pup loved food so much in life. I am so deeply comforted to see her enjoying her dinner again like this. At first, the photo I chose made the model look a bit off, but the support was incredibly prompt and patient—they adjusted her hologram to absolute perfection even over the holidays!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">J</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Jenny's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Tabletop Hologram Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 01: Mishiu (Video only) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <video src="01.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            <span class="absolute top-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-[#d4af37]">Real Hologram</span>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "This is truly wonderful! During her final sickness, she refused to eat. Seeing her here dining happily again takes away all my regrets. You can even upload voice recordings. When I call her name, she jumps and barks happily. After-sales support is outstanding. Thank you so much."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">M</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Mishiu's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Audio Interactive Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 03: Maki (Image/Video Tab Switcher) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img id="img-story-03" src="03.jpg" alt="Maki Photo" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300">
+                            <video id="vid-story-03" src="03.mp4" loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"></video>
+                            
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex bg-black/75 backdrop-blur-md p-1 rounded-full border border-white/10 text-[9px] z-10">
+                                <button onclick="toggleMedia('story-03', 'photo')" id="btn-photo-story-03" class="px-2.5 py-1 rounded-full text-white bg-white/10 font-medium transition-all">In Life</button>
+                                <button onclick="toggleMedia('story-03', 'video')" id="btn-video-story-03" class="px-2.5 py-1 rounded-full text-zinc-400 font-medium transition-all">Hologram</button>
+                            </div>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "I bought a cheap projection box online before that required putting my phone on top. It was quite a hassle, though the effect was okay. When I saw this standalone model, I got it immediately. It stays lit on my desk so I can see my baby anytime. The craftsmanship is beautiful, so lifelike!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">M</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Maki's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Phone-free Standalone Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 04: Baby (Image/Video Tab Switcher) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img id="img-story-04" src="04.jpg" alt="Baby Photo" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300">
+                            <video id="vid-story-04" src="04.mp4" loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"></video>
+                            
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex bg-black/75 backdrop-blur-md p-1 rounded-full border border-white/10 text-[9px] z-10">
+                                <button onclick="toggleMedia('story-04', 'photo')" id="btn-photo-story-04" class="px-2.5 py-1 rounded-full text-white bg-white/10 font-medium transition-all">In Life</button>
+                                <button onclick="toggleMedia('story-04', 'video')" id="btn-video-story-04" class="px-2.5 py-1 rounded-full text-zinc-400 font-medium transition-all">Hologram</button>
+                            </div>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "I ordered this purely out of curiosity but it completely exceeded my expectations. The holographic projection is made with so much care. Seeing my sweet companion move again and interactive with me brings immense healing. Thank you for giving shape to my memories."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">B</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Baby's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Dynamic Interactive Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 05: Dodo (Single Image) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img src="05.jpg" alt="Dodo" class="w-full h-full object-cover">
+                            <span class="absolute top-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-zinc-400">Real Photo</span>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "I got to see my dog again 😭 At first, the look wasn't exactly like her, but the store owner was incredibly patient. They adjusted it multiple times based on my requests. Finally, she looks exactly like herself. It feels like she has come back to me."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">D</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Dodo's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Desktop Hologram Frame</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 06: Qiuball (Single Image) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img src="06.jpg" alt="Qiuball" class="w-full h-full object-cover">
+                            <span class="absolute top-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-zinc-400">Real Photo</span>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "I am so deeply grateful for this wonderful technology. It brings true comfort and peace to my aching heart."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">Q</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Qiuball's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Preserved Moss Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 07: Baobao (Single Image) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img src="07.jpg" alt="Baobao" class="w-full h-full object-cover">
+                            <span class="absolute top-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-zinc-400">Real Photo</span>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "I see my sweet baby again! Thank you so much to the shop for carefully adjusting everything according to my notes."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">B</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Baobao's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Desktop Hologram Frame</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 08: Oldboy (Single Image) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img src="08.jpg" alt="Oldboy" class="w-full h-full object-cover">
+                            <span class="absolute top-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-zinc-400">Real Photo</span>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "Instantly my tears streamed down with no control... My companion returned to me in a beautiful new way. Customer service was incredibly patient in adjusting the tiny details of my sweet old boy. So satisfied."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">O</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Oldboy's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Custom Animation Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 09: Dafu (Single Image) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img src="09.jpg" alt="Dafu" class="w-full h-full object-cover">
+                            <span class="absolute top-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-zinc-400">Real Photo</span>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "Extremely lifelike. The owner is so gentle. I delayed submitting my photos for months because I lacked the courage to scroll through my old phone albums, but the owner waited so patiently and respected my grief. Outstanding care."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">D</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Dafu's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Standalone Hologram Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐️ Story 10: Archie (Single Image) ⭐️ -->
+                <div class="snap-center shrink-0 w-[88%] sm:w-[330px] bg-[#18181b] border border-zinc-800 rounded-2xl p-4 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-square rounded-xl mb-3 overflow-hidden bg-black relative">
+                            <img src="10.jpg" alt="Archie" class="w-full h-full object-cover">
+                            <span class="absolute top-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-zinc-400">Real Photo</span>
+                        </div>
+                        <div class="flex text-[#d4af37] text-[10px] mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-zinc-300 text-xs leading-relaxed italic mb-4 min-h-[72px]">
+                            "The resemblance is absolutely striking. Highly recommended."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2.5 border-t border-zinc-800/60 pt-3">
+                        <div class="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-700">A</div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold">Archie's Family</h4>
+                            <p class="text-[9px] text-zinc-500">Customized: Preserved Moss Box</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Indicators -->
+            <div class="flex justify-center items-center gap-1.5 mt-3 sm:hidden">
+                <span class="w-3 h-1 bg-[#d4af37] rounded-full"></span>
+                <span class="w-1 h-1 bg-zinc-700 rounded-full"></span>
+                <span class="w-1 h-1 bg-zinc-700 rounded-full"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Block: Two Core Product Lines (Comparison) -->
+    <section id="products" class="py-16 bg-zinc-950/40 relative">
+        <div class="max-w-md mx-auto px-4 md:max-w-5xl">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-2xl font-bold mb-3 text-white">Choose Your Remembrance Style</h2>
+                <p class="text-zinc-500 text-xs">We proudly offer two distinct customized systems to fit your preference</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Line 1: STANDALONE HOLOGRAM BOX (No Phone Needed) -->
+                <div class="bg-[#18181b] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-full aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 relative mb-5">
+                            <img src="SKU 属性图_01.jpg" alt="Standalone Box" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-yellow-500 text-black font-bold text-[10px] px-3 py-1 rounded-full shadow-md uppercase">
+                                Standalone Screen (No Phone Needed)
+                            </span>
+                        </div>
+                        <h3 class="text-white font-bold text-xl mb-3">Banyo Companion · Standalone Digital Cabin</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+                            Featuring a built-in high-definition display, this model is completely independent. It does not occupy your phone. Keeps the lifelike holographic animation running permanently on your nightstand or study desk.
+                        </p>
+                        <ul class="text-zinc-500 text-xs space-y-2 mb-6">
+                            <li><i class="fas fa-check text-[#d4af37] mr-1.5"></i> <strong>Built-in Display:</strong> Ready to play immediately upon power.</li>
+                            <li><i class="fas fa-check text-[#d4af37] mr-1.5"></i> <strong>Touch & Voice Interaction:</strong> Talk to them or pat their head to respond.</li>
+                            <li><i class="fas fa-check text-[#d4af37] mr-1.5"></i> <strong>Custom Outfits:</strong> Swappable seasonal backgrounds and AI outfits.</li>
+                        </ul>
+                    </div>
+                    <!-- Fixed: High-compatibility WhatsApp API Link -->
+                    <a href="https://api.whatsapp.com/send?phone=8618365131225" target="_blank" rel="noopener noreferrer" class="w-full bg-[#d4af37] hover:bg-[#bda12a] text-black font-bold text-center py-3 rounded-full text-xs transition-colors">
+                        Inquire About Standalone Model
+                    </a>
+                </div>
+
+                <!-- Line 2: MOBILE ECO-MOSS PROJECTION BOX (Requires Phone) -->
+                <div class="bg-[#18181b] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-full aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 relative mb-5">
+                            <img src="SKU 属性图_04.jpg" alt="Eco Moss Mobile Box" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-zinc-700 text-white font-bold text-[10px] px-3 py-1 rounded-full shadow-md uppercase">
+                                Phone Projection (Eco-Moss Edition)
+                            </span>
+                        </div>
+                        <h3 class="text-white font-bold text-xl mb-3">Eco-Moss Projection Tabletop Box</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+                            Our beautiful, cost-effective model combining nature with tech. Features alive, preserved moss which thrives with its built-in full spectrum plant light. Simply lay your smartphone flat on top of the box to project.
+                        </p>
+                        <ul class="text-zinc-500 text-xs space-y-2 mb-6">
+                            <li><i class="fas fa-check text-zinc-400 mr-1.5"></i> <strong>Eco-Preserved Moss:</strong> Adds a fresh, peaceful forest aroma.</li>
+                            <li><i class="fas fa-check text-zinc-400 mr-1.5"></i> <strong>Timer Plant Light:</strong> Full spectrum lighting that nourishes the moss.</li>
+                            <li><i class="fas fa-check text-zinc-400 mr-1.5"></i> <strong>Free Accessories:</strong> Comes with adorable glowing mushrooms.</li>
+                        </ul>
+                    </div>
+                    <!-- Fixed: High-compatibility WhatsApp API Link -->
+                    <a href="https://api.whatsapp.com/send?phone=8618365131225" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-center py-3 rounded-full text-xs transition-colors border border-white/10">
+                        Inquire About Eco-Moss Model
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Block: Deep Technology Specs (Bento Grid) -->
+    <section id="showcase" class="py-16">
+        <div class="max-w-md mx-auto px-4 md:max-w-5xl">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-2xl font-bold mb-3 text-white">Exceptional Craftsmanship</h2>
+                <p class="text-zinc-500 text-xs">Meticulous engineering engineered to safely preserve your sweet memories</p>
+            </div>
+
+            <!-- Bento Card Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                
+                <!-- 1. Video Card (内置 视频_01.mp4 视频文件进行播放示范) -->
+                <div class="md:col-span-2 bg-[#18181b] border border-zinc-800/80 rounded-2xl p-6 flex flex-col justify-between reveal">
+                    <div class="w-full aspect-[4/3] sm:aspect-[16/10] bg-black rounded-xl mb-5 overflow-hidden border border-zinc-800 relative shadow-inner">
+                        <video src="视频_01.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                        <span class="absolute top-3 left-3 bg-green-500/80 text-black font-bold text-[10px] px-2.5 py-1 rounded-full backdrop-blur-sm shadow-md">
+                            <i class="fas fa-fingerprint mr-1"></i> Standalone Active Interaction Video
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-base mb-2">Built-in Interactive Sensors</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">
+                            Our advanced capacitive touch detection allows real-time interactive cues. Gently touch the top of the cabin to pet, feed, or shake hands with your rendered companion, delivering a deep therapeutic comfort.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Home Decor Card (主图_04.png 证明高档居家摆设) -->
+                <div class="bg-[#18181b] border border-zinc-800/80 rounded-2xl p-6 flex flex-col justify-between reveal">
+                    <div class="w-full aspect-square rounded-xl mb-5 overflow-hidden border border-zinc-800">
+                        <img src="主图_04.png" alt="EternityPaws Setup" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-base mb-1.5">Luxurious Home Decoration</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">
+                            Handcrafted natural wood base built with precious North American Black Walnut, meticulously polished across 32 steps. Keeps your space quiet, elegant, and forever filled with warmth.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Photo Reconstruction Card (描述图_12.jpg 证明还原技术) -->
+                <div class="md:col-span-3 bg-[#18181b] border border-zinc-800/80 rounded-2xl p-6 reveal">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div class="w-full rounded-xl overflow-hidden border border-zinc-800">
+                            <img src="描述图_12.jpg" alt="AI Photo to Hologram comparison" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="space-y-4">
+                            <span class="text-xs text-[#d4af37] font-semibold tracking-wider uppercase">High-Fidelity AI Reconstruction</span>
+                            <h3 class="text-white font-bold text-xl">From Flat 2D Photo to Vivid 3D Representation</h3>
+                            <p class="text-zinc-400 text-xs leading-relaxed">
+                                Our engineering team uses deep structural mapping models to accurately trace facial curves and fur textures from any old, casual photo. Enjoy clear, glass-free volumetric rendering with remarkable precision.
+                            </p>
+                            <div class="border-t border-zinc-800/80 pt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-zinc-900/50 p-2 rounded-lg">
+                                    <span class="text-[#d4af37] font-bold text-sm block">95%</span>
+                                    <span class="text-zinc-500 text-[10px]">Facial Feature Accuracy</span>
+                                </div>
+                                <div class="bg-zinc-900/50 p-2 rounded-lg">
+                                    <span class="text-[#d4af37] font-bold text-sm block">120+</span>
+                                    <span class="text-zinc-500 text-[10px]">Animation Skeleton Nodes</span>
+                                </div>
+                                <div class="bg-zinc-900/50 p-2 rounded-lg">
+                                    <span class="text-[#d4af37] font-bold text-sm block">HD</span>
+                                    <span class="text-zinc-500 text-[10px]">True Liquid Crystal Panel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Voice Dialog (描述图_04.jpg) -->
+                <div class="bg-[#18181b] border border-zinc-800/80 rounded-2xl p-6 flex flex-col justify-between reveal">
+                    <div class="w-full aspect-square rounded-xl mb-5 overflow-hidden border border-zinc-800">
+                        <img src="描述图_04.jpg" alt="Voice Interaction Box" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-base mb-1.5">Speak & They Will Answer</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">
+                            Import their original real-life barking/meowing sound bytes, or customize a comforting dialogue. Call out their name, say "I miss you", and receive a deeply soothing response.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Wardrobe Customize (描述图_05.png) -->
+                <div class="bg-[#18181b] border border-zinc-800/80 rounded-2xl p-6 flex flex-col justify-between reveal">
+                    <div class="w-full aspect-square rounded-xl mb-5 overflow-hidden border border-zinc-800">
+                        <img src="描述图_05.png" alt="Wardrobe Customize" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-base mb-1.5">Custom Outfits & Scenes</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">
+                            Customize a sweet wardrobe for your rendered companion with adorable shirts, bows, and hats. You can also adjust virtual backgrounds dynamically matching the changing seasons.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. Free Nightglow Gift (SKU 属性图_11.jpg) -->
+                <div class="bg-[#18181b] border border-zinc-800/80 rounded-2xl p-6 flex flex-col justify-between reveal">
+                    <div class="w-full aspect-square rounded-xl mb-5 overflow-hidden border border-zinc-800 relative">
+                        <img src="SKU 属性图_11.jpg" alt="Glow-in-the-dark miniatures" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-yellow-500 text-black font-bold text-[9px] px-2 py-0.5 rounded">Free Gift</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-base mb-1.5">Adorable Glowing Miniatures</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">
+                            For every custom order, we pack an adorable set of glow-in-the-dark miniature forest elements. Perfect to decorate the micro-landscape, creating a dreamy night atmosphere.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fourth Block: Easy Customization Steps -->
+    <section id="process" class="py-16 bg-zinc-900/10 border-t border-white/5">
+        <div class="max-w-md mx-auto px-6 reveal">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-white mb-2">Four Steps to Reunion</h2>
+                <p class="text-zinc-500 text-xs">Caring one-on-one professional design and delivery process</p>
+            </div>
+            
+            <div class="relative border-l border-zinc-800 ml-4 space-y-10">
+                
+                <!-- Step 1 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 bg-zinc-950 border border-zinc-800 rounded-full flex items-center justify-center shadow-md">
+                        <span class="text-[#d4af37] font-bold text-xs">01</span>
+                    </div>
+                    <h3 class="text-white font-bold text-sm mb-1">WhatsApp Chat</h3>
+                    <p class="text-zinc-500 text-xs">Click our contact buttons below to reach our custom design consultant. Discuss your ideal setup and requirements.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 bg-zinc-950 border border-zinc-800 rounded-full flex items-center justify-center shadow-md">
+                        <span class="text-[#d4af37] font-bold text-xs">02</span>
+                    </div>
+                    <h3 class="text-white font-bold text-sm mb-1">Submit Photos/Videos</h3>
+                    <p class="text-zinc-500 text-xs">Send us your favorite pictures or videos of your companion. Our modelers will conduct a free technical feasibility review.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 bg-zinc-950 border border-zinc-800 rounded-full flex items-center justify-center shadow-md">
+                        <span class="text-[#d4af37] font-bold text-xs">03</span>
+                    </div>
+                    <h3 class="text-white font-bold text-sm mb-1">Review & Fine-Tune</h3>
+                    <p class="text-zinc-500 text-xs">Once the initial 3D model rendering is complete, we will send you a preview video. We support unlimited revisions until you are completely happy.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 bg-[#d4af37] border border-[#d4af37] rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(212,175,55,0.4)]">
+                        <i class="fas fa-check text-black text-xs"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-sm mb-1">Safely Pack & Shipped</h3>
+                    <p class="text-zinc-500 text-xs">We lock and solid-state the code into your physical cabin. Packed in double-reinforced safe boxes and delivered straight to your door. Plug-and-play!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fifth Block: CTA High conversion block -->
+    <section class="py-24 relative overflow-hidden bg-gradient-to-t from-black to-zinc-950 text-center border-t border-white/5">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-64 bg-[#d4af37] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="relative z-10 max-xl:mx-auto px-6 reveal">
+            <h2 class="text-3xl font-bold text-white mb-6">Do Not Let Sweet Memories Stay Faded in Albums</h2>
+            <p class="text-zinc-400 text-sm mb-10 leading-relaxed">Every life that walked beside us deserves to be remembered with warmth. Contact us today with your companion's photos for a professional, free 3D modeling feasibility assessment.</p>
+            
+            <!-- Fixed: High-compatibility WhatsApp API Link -->
+            <a href="https://api.whatsapp.com/send?phone=8618365131225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1ebd56] text-white px-10 py-4.5 rounded-full font-bold text-lg transition-all shadow-[0_4px_25px_rgba(37,211,102,0.3)]">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                Start Custom Evaluation on WhatsApp
+            </a>
+            
+            <p class="mt-6 text-zinc-500 text-xs tracking-wider">WhatsApp Line: +86 183 6513 1225</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-900 bg-black py-10 text-center text-zinc-600 text-xs">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-3">
+            <div class="flex items-center gap-1.5 opacity-50">
+                <i class="fas fa-paw text-[#d4af37]"></i>
+                <span class="font-bold text-zinc-300">EternityPaws</span>
+            </div>
+            <p>&copy; 2026 EternityPaws Holographic Memorial. All rights reserved.<br>Keeping true emotional warmth alive with cutting-edge technology.</p>
+        </div>
+    </footer>
+
+    <!-- 📱 Mobile Floating CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 p-3 bg-[#121212]/95 backdrop-blur-md border-t border-zinc-800/80 z-50 md:hidden flex items-center justify-between shadow-[0_-10px_25px_rgba(0,0,0,0.6)]">
+        <div class="flex flex-col text-left">
+            <span class="text-white font-bold text-sm">Custom Hologram Box</span>
+            <span class="text-[#d4af37] text-[10px]">Free Material Evaluation</span>
+        </div>
+        <!-- Fixed: High-compatibility WhatsApp API Link -->
+        <a href="https://api.whatsapp.com/send?phone=8618365131225" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center gap-1.5 btn-glow animate-bounce" style="animation: bounce 2s infinite;">
+            <i class="fab fa-whatsapp text-base"></i> Chat on WhatsApp
+        </a>
+    </div>
+
+    <!-- 💻 Desktop Floating Button -->
+    <!-- Fixed: High-compatibility WhatsApp API Link -->
+    <a href="https://api.whatsapp.com/send?phone=8618365131225" target="_blank" rel="noopener noreferrer" class="hidden md:flex fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full items-center justify-center text-2xl shadow-2xl hover:bg-[#1ebd56] hover:scale-105 transition-all">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Core interactive scripts -->
+    <script>
+        // Media switcher: smooth transition
+        function toggleMedia(id, type) {
+            const img = document.getElementById('img-' + id);
+            const vid = document.getElementById('vid-' + id);
+            const btnPhoto = document.getElementById('btn-photo-' + id);
+            const btnVideo = document.getElementById('btn-video-' + id);
+            
+            if (!img || !vid) return;
+
+            if (type === 'photo') {
+                img.classList.remove('opacity-0');
+                vid.classList.add('opacity-0');
+                vid.pause();
+                
+                btnPhoto.classList.add('bg-white/10', 'text-white');
+                btnPhoto.classList.remove('text-zinc-400');
+                btnVideo.classList.remove('bg-white/10', 'text-white');
+                btnVideo.classList.add('text-zinc-400');
+            } else {
+                img.classList.add('opacity-0');
+                vid.classList.remove('opacity-0');
+                vid.play().catch(() => {});
+                
+                btnVideo.classList.add('bg-white/10', 'text-white');
+                btnVideo.classList.remove('text-zinc-400');
+                btnPhoto.classList.remove('bg-white/10', 'text-white');
+                btnPhoto.classList.add('text-zinc-400');
+            }
+        }
+
+        // Viewport animation trigger
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
